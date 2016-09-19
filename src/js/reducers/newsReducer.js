@@ -1,5 +1,7 @@
 export default function reducer(state={
 	news: [],
+	pagesize: 2,
+	page: 1,
 	fetching: false,
 	fetched: false,
 	error: null,
@@ -10,11 +12,16 @@ export default function reducer(state={
 		case "FETCH_NEWS_REJECTED":
 			return {...state, fetching: false, error: action.payload}
 		case "FETCH_NEWS_FULFILLED":
+			// console.log([...state.news].concat(['a', 'b']));
+			var allNews = [...state.news].concat(action.payload.news.data);
+			console.log(allNews);
 			return {
 				...state,
 				fetching: false,
 				fetched: true,
-				news: action.payload
+				pagesize: action.payload.pagesize,
+				page: action.payload.page,
+				news: allNews
 			}
 		case "ADD_NEWS":
 			return {

@@ -1,10 +1,21 @@
 import axios from "axios";
 
-export function fetchNews(){
+export function fetchNews(pagesize, page){
 	return function(dispatch){
-		axios.get("http://localhost:808/news")
+		console.log("http://localhost:808/news?pagesize=" + pagesize + "&page=" + page);
+		axios.get("http://localhost:808/news?pagesize=" + pagesize + "&page=" + page)
 			.then((response) => {
-				dispatch({type: "FETCH_NEWS_FULFILLED", payload: response.data})
+				page = page + 1;
+				dispatch(
+					{
+						type: "FETCH_NEWS_FULFILLED", 
+						payload: {
+							pagesize: pagesize,
+							page: page,
+							news: response.data
+						}
+					}
+				)
 			})
 			.catch((err) => {
 				dispatch({type: "FETCH_NEWS_REJECTED", payload: err})

@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import store from "./store";
 
 import Index from './components/Index';
+import News from './components/News';
 import Hello from './components/Hello';
 
 const app = document.getElementById('app');
@@ -12,7 +13,7 @@ const app = document.getElementById('app');
 
 ReactDOM.render(
 	<Provider store={store}>
-  		<Index />
+  		<News />
   	</Provider>,
   app
 );
