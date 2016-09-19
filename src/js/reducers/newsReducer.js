@@ -1,7 +1,8 @@
 export default function reducer(state={
 	news: [],
-	pagesize: 2,
+	pagesize: 4,
 	page: 1,
+	hasmore: true,
 	fetching: false,
 	fetched: false,
 	error: null,
@@ -14,14 +15,15 @@ export default function reducer(state={
 		case "FETCH_NEWS_FULFILLED":
 			// console.log([...state.news].concat(['a', 'b']));
 			var allNews = [...state.news].concat(action.payload.news.data);
-			console.log(allNews);
+			// console.log(allNews);
 			return {
 				...state,
 				fetching: false,
 				fetched: true,
 				pagesize: action.payload.pagesize,
 				page: action.payload.page,
-				news: allNews
+				news: allNews,
+				hasmore: action.payload.hasmore
 			}
 		case "ADD_NEWS":
 			return {

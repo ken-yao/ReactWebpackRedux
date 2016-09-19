@@ -14,6 +14,7 @@ import {fetchUser} from "../actions/userActions";
         page: store.news.page,
         fetching: store.news.fetching,
         fetched: store.news.fetched,
+        hasmore: store.news.hasmore,
     }
 })
 
@@ -33,24 +34,50 @@ export default class News extends React.Component {
 	render(){
         const {news} = this.props;
 
-        if(!(news && news.length)){
+
+        var loadingHtml = '';
+        if(this.props.fetching){
+            loadingHtml = <p>正在拼命加载中...</p>;
+        }
+
+        if(!this.props.fetched){
+            loadingHtml = <p>正在拼命加载中...</p>;
+        }
+
+        if(!news.length && this.props.fetched){
             return <p>没有内容</p>
         }
+
+
+        var loadMoreHtml = '';
+        if(this.props.hasmore){
+            loadMoreHtml = <span className="loadMoreBtn" onClick={() => this.fetchNews(4, this.props.page)}>加载更多</span>
+        }
+
+
 
 		return (
             <div>
                 <h1>新闻中心</h1>
                 <hr />
-                <ul>
+                <ul className="newsList">
                     {
                         news.map((news) => {
                             return (
-                                <li key={news.id}>{news.title}</li>
+                                <li key={news.id}>
+                                    {news.title}
+                                    
+                                    
+                                </li>
                             );
                         })
                     }
                 </ul>
-                <button onClick={() => this.fetchNews(2, this.props.page)}>加载更多</button>
+
+                {loadingHtml}
+
+                {loadMoreHtml}
+                
             </div>
 		);
 	}

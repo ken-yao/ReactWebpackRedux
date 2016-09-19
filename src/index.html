@@ -8,16 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 *{margin:0; padding:0;}
+li{list-style:none;}
 section{border:1px solid #ccc; box-sizing: border-box;width:100%;margin-bottom: 20px;}
 section h2{font-size: 18px;display: block;background-color: #eee;padding-left:8px;height:30px;line-height: 30px;}
-.container{margin:0 auto; width: 1000px;}
+.container{margin:0 auto; min-width: 320px;max-width: 600px;}
 .header{width:100%;background-color: #444;margin-bottom: 20px;}
-.header div{padding:20px;width:1000px;margin:0 auto;color:#fff;}
+.header div{padding:20px;min-width:320px;max-width: 600px;margin:0 auto;color:#fff;}
 .header div img{width:60px;position:absolute;}
 .header div h1, .header div a{margin-left:80px;}
 .header div a{color:#fff;}
 .margin{margin:10px;}
 .padding{padding:10px;}
+.loadMoreBtn{with:100%; display: block; background-color: #eee; text-align: center; height:32px; line-height: 32px;margin-top: 10px;cursor: pointer;}
+
+.newsList{}
+.newsList li{display: block;}
 </style>
 </head>
 <body>
