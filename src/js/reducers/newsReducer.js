@@ -13,9 +13,7 @@ export default function reducer(state={
 		case "FETCH_NEWS_REJECTED":
 			return {...state, fetching: false, error: action.payload}
 		case "FETCH_NEWS_FULFILLED":
-			// console.log([...state.news].concat(['a', 'b']));
 			var allNews = [...state.news].concat(action.payload.news.data);
-			// console.log(allNews);
 			return {
 				...state,
 				fetching: false,

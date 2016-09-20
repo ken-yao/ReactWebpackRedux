@@ -1,0 +1,119 @@
+*{margin:0; padding:0;}
+li{list-style:none;}
+section{border:1px solid #ccc; box-sizing: border-box;width:100%;margin-bottom: 20px;}
+section h2{font-size: 18px;display: block;background-color: #eee;padding-left:8px;height:30px;line-height: 30px;}
+.container{margin:0 auto; min-width: 320px;max-width: 600px;}
+.header{width:100%;background-color: #444;margin-bottom: 20px;}
+.header div{padding:20px;min-width:320px;max-width: 600px;margin:0 auto;color:#fff;}
+.header div img{width:60px;position:absolute;}
+.header div h1, .header div a{margin-left:80px;}
+.header div a{color:#fff;}
+.margin{margin:10px;}
+.padding{padding:10px;}
+
+.loading{margin:0 auto; text-align: center;}
+.loading img{display: block; margin: 0 auto;text-align: center}
+.loadMoreBtn{with:100%; display: block; background-color: #eee; text-align: center; height:32px; line-height: 32px;margin: 10px auto;cursor: pointer;}
+
+.newsList{margin:10px auto;}
+.newsList li{display:flex; flex-direction: row;margin-bottom: 15px;border-bottom: 1px solid #eee;}
+.newsList li .newsItemImg{flex-basis: 30%; margin-right: 10px;}
+.newsList li .newsItemImg img {display:block; width:100%;}
+.newsList .newsItem{flex:1;}
+.newsList .newsItem .keyword{background-color: #dd3333; color:#fff; text-align: center; border-radius: 0.2rem; margin-right: 0.4rem;padding:0.2rem 0.4rem; font-size: 0.9rem;}
+.newsList .newsItem h3{font-family: '微软雅黑'; font-size: 1rem;margin-bottom: 0.4rem; color:#333;}
+.newsList .newsItem p{text-align:justify; font-size: 0.9rem;margin-top: 0.4rem;color:#444;}
+.newsList .newsItem .date{display:block; margin-top: 0.4rem;text-align: right;}
+
+.usersList{margin:10px auto;border:1px solid #ddd; padding:10px 20px;}
+.usersList li{display: flex; flex-direction: row; justify-content: space-between; align-items: center; height:32px;line-height: 32px;border-bottom:1px solid #eee;}
+
+.usersList span{color:#fff; padding:6px 10px; font-size: 12px; border-radius: 4px;}
+.usersList span:first-child{background-color: #0a8acd; }
+.usersList span:last-child{background-color: #dd3333; margin-left: 4px;}
+
+
+
+.addUser{}
+
+.addUserBtn{display:block; background-color: #0a8acd; color:#fff; width:4rem;text-align: center; cursor: pointer; font-size: 12px; height: 32px; line-height: 32px; padding:4px 8px;border-radius: 4px;}
+
+.addUserStatus{text-align: center;}
+
+
+.page-wrap {
+  height: 100%;
+}
+.page-content {
+  position: relative;
+  width: 100%;
+  background: #fefefe;
+}
+.content {
+  max-width: 1130px;
+  _width: 1130px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.user-form {
+  background: #eef1f3;
+  text-align: center;
+  padding: 20px;
+}
+.user-form {
+  width: 40%;
+  margin-left: 20%;
+  float: left;
+/*   float: right; */
+  display: inline;
+}
+.user-form-fieldset {
+  width: 80%;
+  margin: 0 auto 20px;
+  position: relative;
+}
+.user-form-label {
+  display: block;
+  font-size: 14px;
+  text-align: left;
+  padding: 5px 2px;
+  letter-spacing: 5px;
+}
+.user-form-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c1d0d9;
+  background: #fefefe;
+  border-radius: 5px;
+}
+.user-form-button {
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 5px;
+  border: none;
+  color: #fcfcfc;
+  background: #0f56a3;
+  cursor: pointer;
+}
+.sign-up-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 47px;
+  line-height: 45px;
+  font-size: 18px;
+}
+#sign-up .cellphone {
+  width: 50%;
+  float: left;
+}
+#sign-up .vercode-button {
+  padding: 10px  0;
+  width: 40%;
+}
+
+
